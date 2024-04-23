@@ -1,4 +1,3 @@
-const { color } = require("chart.js/helpers");
 const WebSocket = require("ws");
 
 const wss = new WebSocket.Server({ port: 8080 });
