@@ -1,5 +1,7 @@
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
+var HOST = location.origin.replace(/^http/, "wss");
+const ws = new WebSocket(HOST);
 
 //set the map size for the dot to explore
 const mapWidth = 2000;
@@ -179,9 +181,6 @@ function getRandomColor() {
 
 //update the player position every 10ms
 setInterval(updateDotPosition, 10);
-
-var HOST = location.origin.replace(/^http/, "wss");
-const ws = new WebSocket(HOST);
 
 let myPlayerId;
 const players = {};
