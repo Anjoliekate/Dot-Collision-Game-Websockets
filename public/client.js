@@ -179,8 +179,8 @@ function getRandomColor() {
   return "#" + Math.floor(Math.random() * 16777215).toString(16);
 }
 
-//update the player position every 10ms
-setInterval(updateDotPosition, 10);
+//update the player position every 1ms
+setInterval(updateDotPosition, 1);
 
 let myPlayerId;
 const players = {};
