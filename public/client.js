@@ -180,7 +180,7 @@ function getRandomColor() {
 //update the player position every 10ms
 setInterval(updateDotPosition, 10);
 
-var HOST = location.origin.replace(/^http/, "ws");
+var HOST = location.origin.replace(/^http/, "wss");
 const ws = new WebSocket(HOST);
 
 let myPlayerId;
