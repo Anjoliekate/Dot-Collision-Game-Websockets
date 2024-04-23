@@ -1,6 +1,12 @@
 const WebSocket = require("ws");
+const express = require("express");
 
-const wss = new WebSocket.Server({ port: 8080 });
+const PORT = process.env.PORT || 8080;
+const app = express(PORT);
+app.use(express.static("public"));
+server = app.listen(PORT);
+
+const wss = new WebSocket.Server({ server });
 
 const players = {};
 const playerName = "";
