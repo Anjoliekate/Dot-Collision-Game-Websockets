@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dot Collision</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="startingBox">
+      <div id="startingScreen">
+        <h1>Dot Collision</h1>
+        <p>Enter your name and click start to play</p>
+        <input type="text" id="nameInput" placeholder="Enter your name" />
+        <button value="false" onclick="change()" id="startButton">
+          Start Game
+        </button>
+      </div>
+    </div>
+    <div id="leaderBoard">
+      Leaderboard
+      <ul id="leaderBoardList">
+        <li>
+          <script></script>
+        </li>
+      </ul>
+    </div>
+    <canvas id="canvas"> </canvas>
+    <script src="client.js"></script>
+  </body>
+</html>
