@@ -1,6 +1,6 @@
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
-var HOST = location.origin.replace(/^http/, "wss");
+var HOST = location.origin.replace(/^https/, "wss");
 const ws = new WebSocket(HOST);
 
 //set the map size for the dot to explore
