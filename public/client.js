@@ -81,6 +81,22 @@ for (let i = 0; i < 1000; i++) {
   });
 }
 
+var playerPairSorted = [];
+
+function getLargestForLeaderboard() {
+  PlayerRadiusPair = [{ userName: "", radius: 0 }];
+  Object.keys(players).forEach((playerId) => {
+    const player = players[playerId];
+    PlayerRadiusPair.push({
+      name: player.name,
+      radius: player.radius,
+    });
+  });
+  //sort the players by radius
+  PlayerRadiusPair.sort((a, b) => b.radius - a.radius);
+  playerPairSorted = PlayerRadiusPair;
+}
+
 function updateDotPosition() {
   //move the player towards the mouse
   const dx = mouseX - dotX;
@@ -225,19 +241,4 @@ function sendPlayerPosition(x, y, name, Color) {
   );
   getLargestForLeaderoard();
   console.log(playerPairSorted);
-}
-var playerPairSorted = [];
-
-function getLargestForLeaderboard() {
-  PlayerRadiusPair = [{ userName: "", radius: 0 }];
-  Object.keys(players).forEach((playerId) => {
-    const player = players[playerId];
-    PlayerRadiusPair.push({
-      name: player.name,
-      radius: player.radius,
-    });
-  });
-  //sort the players by radius
-  PlayerRadiusPair.sort((a, b) => b.radius - a.radius);
-  playerPairSorted = PlayerRadiusPair;
 }
