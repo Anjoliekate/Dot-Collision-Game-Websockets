@@ -66,6 +66,11 @@ function change() {
   }
 }
 
+startButton.addEventListener("change", function (event) {
+  const playerColor = getRandomColor();
+  sendPlayerPosition(dotX, dotY, userName, playerColor);
+});
+
 //create 1000 static dots with random positions and colors
 for (let i = 0; i < 1000; i++) {
   staticDots.push({
@@ -207,7 +212,7 @@ function updatePlayerPositions(newPlayerPositions) {
   getLargestForLeaderboard();
 }
 
-function sendPlayerPosition(x, y, name) {
+function sendPlayerPosition(x, y, name, Color) {
   ws.send(
     JSON.stringify({
       type: "playerPosition",
@@ -215,10 +220,10 @@ function sendPlayerPosition(x, y, name) {
       y: y,
       userName: name,
       radius: dotRadius,
-      color: "red",
+      color: Color,
     })
   );
-  getLargestForLeaderboard();
+  getLargestForLeaderoard();
   console.log(playerPairSorted);
 }
 var playerPairSorted = [];
