@@ -105,7 +105,7 @@ function updateDotPosition() {
   const dx = mouseX - dotX;
   const dy = mouseY - dotY;
   const distance = Math.sqrt(dx * dx + dy * dy);
-  const speed = 3;
+  const speed = 1;
   // if distance is greater than speed, move towards mouse
   if (distance > speed) {
     dotX += (dx / distance) * speed;
