@@ -84,7 +84,7 @@ for (let i = 0; i < 1000; i++) {
 var playerPairSorted = [];
 
 function getLargestForLeaderboard() {
-  PlayerRadiusPair = [{ userName: "", radius: 0 }];
+  PlayerRadiusPair = [];
   Object.keys(players).forEach((playerId) => {
     const player = players[playerId];
     if (player.name !== undefined) {
