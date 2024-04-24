@@ -49,14 +49,16 @@ wss.on("connection", function connection(ws) {
 });
 
 function broadcastPlayerPositions() {
-  const playerPositions = Object.keys(players).map((playerId) => ({
-    playerId,
-    name: players[playerId].name,
-    x: players[playerId].x,
-    y: players[playerId].y,
-    radius: players[playerId].radius,
-    color: players[playerId].color,
-  }));
+  const playerPositions = Object.keys(players)
+    .map((playerId) => ({
+      playerId,
+      name: players[playerId].name,
+      x: players[playerId].x,
+      y: players[playerId].y,
+      radius: players[playerId].radius,
+      color: players[playerId].color,
+    }))
+    .filter((player) => player.name !== undefined);
 
   wss.clients.forEach((client) => {
     if (client.readyState === WebSocket.OPEN) {
