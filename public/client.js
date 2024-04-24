@@ -1,5 +1,6 @@
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
+// var HOST = location.origin.replace(/^http/, "ws");
 var HOST = location.origin.replace(/^https/, "wss");
 const ws = new WebSocket(HOST);
 

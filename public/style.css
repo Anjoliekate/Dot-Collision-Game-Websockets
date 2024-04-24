@@ -4,13 +4,16 @@ html {
   padding: 0;
   height: 100%;
   overflow: hidden;
+  background: rgb(218, 190, 183);
 }
 
 canvas {
   display: block;
   margin: auto;
-  border: 1px solid black;
+  border: 2px solid black;
   margin-top: 100px;
+  background-color: white;
+  border-radius: 10px;
 }
 
 #startingScreen {
@@ -20,7 +23,7 @@ canvas {
 }
 
 #startingBox {
-  background-color: rgb(177, 177, 177);
+  background-color: rgb(236, 214, 214);
   height: 30vw;
   width: 30vw;
   display: grid;
@@ -32,23 +35,65 @@ canvas {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  border: 2px solid rgba(98, 77, 77, 0.9);
 }
 
 #leaderBoard {
   position: absolute;
   font-family: "Courier New", Courier, monospace;
-  top: 10.5%;
-  right: 10%;
+  top: 13%;
+  right: 12%;
   font-size: 20px;
   font-family: Roboto, sans-serif;
-  background-color: rgb(138, 135, 135, 0.5);
+  font-weight: bold;
+  font-style: italic;
+  background-color: rgb(138, 135, 135, 0.4);
   height: 10vw;
   width: 20vw;
   overflow: auto;
+  border-radius: 10px;
 }
 
 #leaderBoard ul {
   list-style-type: none;
   padding: 0;
   padding-left: 20px;
+}
+
+input {
+  padding: 15px;
+}
+
+button {
+  width: 150px;
+  height: 40px;
+  margin: 20px auto;
+  cursor: pointer;
+  border-radius: 5px;
+  border-color: rgb(108, 78, 67);
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: bold;
+  background: linear-gradient(
+    to right,
+    rgb(207, 168, 168),
+    rgb(232, 195, 126),
+    rgb(227, 227, 148),
+    rgb(171, 228, 171),
+    rgb(202, 202, 233),
+    rgb(193, 169, 210),
+    rgb(208, 161, 208),
+    rgb(255, 192, 203)
+  );
+  animation: gradientEffect 5s linear infinite;
+  background-size: 200% 100%;
+}
+
+@keyframes gradientEffect {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
 }

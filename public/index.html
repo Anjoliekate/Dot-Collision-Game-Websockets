@@ -5,20 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dot Collision</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div id="startingBox">
       <div id="startingScreen">
-        <h1>Dot Collision</h1>
+        <h1 style="font-weight: bold; font-style: italic; margin-top: -20px">
+          Dot Collision Game
+        </h1>
         <p>Enter your name and click start to play</p>
+        <br />
         <input type="text" id="nameInput" placeholder="Enter your name" />
+        <br />
         <button value="false" onclick="change()" id="startButton">
           Start Game
         </button>
       </div>
     </div>
     <div id="leaderBoard">
-      Leaderboard
+      <h4 style="padding-left: 8px; margin-top: 8px">Leaderboard:</h4>
       <ul id="leaderBoardList">
         <li>
           <script></script>
