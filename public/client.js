@@ -87,10 +87,12 @@ function getLargestForLeaderboard() {
   PlayerRadiusPair = [{ userName: "", radius: 0 }];
   Object.keys(players).forEach((playerId) => {
     const player = players[playerId];
-    PlayerRadiusPair.push({
-      name: player.name,
-      radius: player.radius,
-    });
+    if (player.name !== undefined) {
+      PlayerRadiusPair.push({
+        name: player.name,
+        radius: player.radius,
+      });
+    }
   });
   //sort the players by radius
   PlayerRadiusPair.sort((a, b) => b.radius - a.radius);
@@ -239,6 +241,6 @@ function sendPlayerPosition(x, y, name, Color) {
       color: Color,
     })
   );
-  getLargestForLeaderoard();
+  getLargestForLeaderboard();
   console.log(playerPairSorted);
 }
