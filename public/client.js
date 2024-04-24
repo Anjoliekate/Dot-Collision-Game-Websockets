@@ -187,7 +187,7 @@ function draw() {
         ctx.arc(player.x, player.y, player.radius, 0, Math.PI * 2);
         ctx.fill();
         ctx.closePath();
-        ctx.fillStyle = "purple";
+        ctx.fillStyle = player.color;
         ctx.font = "18px Arial";
         ctx.textAlign = "center";
         ctx.textBaseline = "middle";
