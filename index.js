@@ -39,8 +39,10 @@ wss.on("connection", function connection(ws) {
 
   ws.on("close", function () {
     console.log("Client disconnected:", playerId);
+    const disconnectedPlayer = players[playerId];
     delete players[playerId];
     broadcastPlayerPositions();
+    console.log("Player disconnected:", disconnectedPlayer.name);
   });
 
   ws.send(JSON.stringify({ type: "playerId", playerId }));

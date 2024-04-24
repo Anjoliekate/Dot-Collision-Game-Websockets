@@ -195,6 +195,7 @@ ws.onmessage = function (event) {
     updatePlayerPositions(data.playerPositions);
   }
 };
+
 ws.onopen = function (event) {
   console.log("Connected to WS Server");
 };
