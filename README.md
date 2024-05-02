@@ -1,6 +1,12 @@
 # Dot Collision Game | Websockets
 
-Dot collision game similar to Agar.io, constructed using HTML canvas element and Node.js to broadcast messages containing players x position, y position, radius, and name. Once the client joins the server creates a unique id for the current player, the player can then decide their name and begin colliding with other randomized static dots on the canvas. As players collide with dots their size is increased by the radius of the static dot. The players radius is displayed on the leaderboard and displays them from largest to smallest. 
+Dot collision game similar to Agar.io, constructed using HTML canvas element and Node.js to broadcast messages containing players: 
+- x position 
+- y position
+- radius
+- name. 
+
+Once the client joins the server creates a unique id for the current player, the player can then decide their name and begin colliding with other randomized static dots on the canvas. As players collide with dots their size is increased by the radius of the static dot. The players radius is displayed on the leaderboard and displays them from largest to smallest. 
 
 This application has been deployed and can be demoed here: https://s24-websocket-anjoliekate.onrender.com/
 
